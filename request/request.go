@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"net/http"
 
-	medusa "github.com/harshmangalam/medusa-sdk-golang"
+	medusa "github.com/ohmygod481999/medusa-sdk-golang"
 )
 
 type Request struct {

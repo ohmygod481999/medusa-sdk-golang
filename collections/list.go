@@ -4,12 +4,12 @@ import (
 	"encoding/json"
 	"net/http"
 
-	medusa "github.com/harshmangalam/medusa-sdk-golang"
-	"github.com/harshmangalam/medusa-sdk-golang/common"
-	"github.com/harshmangalam/medusa-sdk-golang/request"
-	"github.com/harshmangalam/medusa-sdk-golang/response"
-	"github.com/harshmangalam/medusa-sdk-golang/schema"
-	"github.com/harshmangalam/medusa-sdk-golang/utils"
+	medusa "github.com/ohmygod481999/medusa-sdk-golang"
+	"github.com/ohmygod481999/medusa-sdk-golang/common"
+	"github.com/ohmygod481999/medusa-sdk-golang/request"
+	"github.com/ohmygod481999/medusa-sdk-golang/response"
+	"github.com/ohmygod481999/medusa-sdk-golang/schema"
+	"github.com/ohmygod481999/medusa-sdk-golang/utils"
 )
 
 type ListCollectionData struct {
@@ -66,7 +66,7 @@ func (c *CollectionsQuery) SetLimit(limit int) *CollectionsQuery {
 	return c
 }
 
-//Set collection offset
+// Set collection offset
 func (c *CollectionsQuery) SetOffset(offset int) *CollectionsQuery {
 	c.Offset = offset
 	return c

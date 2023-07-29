@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"net/http"
 
-	medusa "github.com/harshmangalam/medusa-sdk-golang"
-	"github.com/harshmangalam/medusa-sdk-golang/request"
-	"github.com/harshmangalam/medusa-sdk-golang/response"
-	"github.com/harshmangalam/medusa-sdk-golang/schema"
-	"github.com/harshmangalam/medusa-sdk-golang/utils"
+	medusa "github.com/ohmygod481999/medusa-sdk-golang"
+	"github.com/ohmygod481999/medusa-sdk-golang/request"
+	"github.com/ohmygod481999/medusa-sdk-golang/response"
+	"github.com/ohmygod481999/medusa-sdk-golang/schema"
+	"github.com/ohmygod481999/medusa-sdk-golang/utils"
 )
 
 type SelectPaymentSessionData struct {
