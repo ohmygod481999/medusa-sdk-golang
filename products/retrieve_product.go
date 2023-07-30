@@ -13,7 +13,7 @@ import (
 )
 
 type RetrieveProductData struct {
-	Product []*schema.Product `json:"product"`
+	Product *schema.Product `json:"product"`
 }
 
 type RetrieveProductResponse struct {
