@@ -13,7 +13,7 @@ import (
 )
 
 type RetrieveArticleData struct {
-	Article *schema.Product `json:"article"`
+	Article *schema.Article `json:"article"`
 }
 
 type RetrieveArticleResponse struct {
