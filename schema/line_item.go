@@ -4,7 +4,7 @@ import "time"
 
 type LineItem struct {
 	Title             string          `json:"title,omitempty"`
-	UnitPrice         bool            `json:"unit_price,omitempty"`
+	UnitPrice         uint            `json:"unit_price,omitempty"`
 	Quantity          uint            `json:"quantity,omitempty"`
 	Id                string          `json:"id,omitempty"`
 	CartId            string          `json:"cart_id,omitempty"`
