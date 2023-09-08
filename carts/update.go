@@ -52,7 +52,7 @@ type UpdateCart struct {
 	BillingAddress any `json:"billing_address"`
 
 	// The Address to be used for shipping.
-	ShippingAddress any `json:"ipping_address"`
+	ShippingAddress any `json:"shipping_address"`
 
 	// An array of Gift Card codes to add to the Cart.
 	GiftCards []*GiftCard `json:"gift_cards"`
