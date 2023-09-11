@@ -29,7 +29,7 @@ type ShippingMethodResponse struct {
 
 type ShippingMethod struct {
 	OptionId string         `json:"option_id"`
-	Data     map[string]any `json:"data"`
+	Data     map[string]any `json:"data,omitempty"`
 }
 
 func NewShippingMethod() *ShippingMethod {
