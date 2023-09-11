@@ -70,6 +70,7 @@ func (req *Request) Send(config *medusa.Config) (*http.Response, error) {
 		var buff bytes.Buffer
 		if req.Data != nil {
 			jsonData, err := json.Marshal(req.Data)
+			fmt.Println("[SDK DEBUG] request body: ", string(jsonData))
 			if err != nil {
 				return nil, err
 			}
