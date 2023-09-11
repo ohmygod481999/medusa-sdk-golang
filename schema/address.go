@@ -10,27 +10,27 @@ type Address struct {
 	CustomerId string `json:"customer_id"`
 
 	// Available if the relation customer is expanded.
-	Customer []*Customer `json:"customer"`
+	Customer []*Customer `json:"customer,omitempty"`
 	// Company name
 	Company string `json:"company,omitempty"`
 
 	// First name
-	FirstName []any `json:"first_name"`
+	FirstName string `json:"first_name"`
 
 	// Last name
-	LastName []any `json:"last_name"`
+	LastName string `json:"last_name"`
 
 	// Address line 1
-	Address1 []any `json:"address_1"`
+	Address1 string `json:"address_1"`
 
 	// Address line 2
-	Address2 []any `json:"address_2"`
+	Address2 string `json:"address_2"`
 
 	// City
-	City []any `json:"city"`
+	City string `json:"city"`
 
 	// The 2 character ISO code of the country in lower case
-	CountryCode []any `json:"country_code"`
+	CountryCode string `json:"country_code"`
 
 	// A country object. Available if the relation country is expanded.
 	Country any `json:"country"`
