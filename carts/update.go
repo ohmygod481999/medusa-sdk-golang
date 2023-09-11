@@ -37,34 +37,34 @@ type GiftCard struct {
 
 type UpdateCart struct {
 	// The id of the Region to create the Cart in.
-	RegionId string `json:"region_id"`
+	RegionId string `json:"region_id,omitempty"`
 
 	// The 2 character ISO country code to create the Cart in.
-	CountryCode string `json:"country_code"`
+	CountryCode string `json:"country_code,omitempty"`
 
 	// An email to be used on the Cart.
-	Email string `json:"email"`
+	Email string `json:"email,omitempty"`
 
 	// The ID of the Sales channel to update the Cart with.
-	SalesChannelId string `json:"sales_channel_id"`
+	SalesChannelId string `json:"sales_channel_id,omitempty"`
 
 	// The Address to be used for billing purposes.
-	BillingAddress any `json:"billing_address"`
+	BillingAddress any `json:"billing_address,omitempty"`
 
 	// The Address to be used for shipping.
-	ShippingAddress any `json:"shipping_address"`
+	ShippingAddress any `json:"shipping_address,omitempty"`
 
 	// An array of Gift Card codes to add to the Cart.
-	GiftCards []*GiftCard `json:"gift_cards"`
+	GiftCards []*GiftCard `json:"gift_cards,omitempty"`
 
 	// An array of Discount codes to add to the Cart.
-	Discounts []*Discount `json:"discounts"`
+	Discounts []*Discount `json:"discounts,omitempty"`
 
 	// The ID of the Customer to associate the Cart with.
-	CustomerId string `json:"customer_id"`
+	CustomerId string `json:"customer_id,omitempty"`
 
 	// An optional object to provide context to the Cart.
-	Context map[string]any `json:"context"`
+	Context map[string]any `json:"context,omitempty"`
 }
 
 func NewUpdateCart() *UpdateCart {
