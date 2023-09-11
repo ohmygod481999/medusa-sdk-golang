@@ -29,7 +29,7 @@ type ListCartResponse struct {
 
 // Retrieves a list of Shipping Options available to a cart.
 func ListCartOptions(cartId string, config *medusa.Config) (*ListCartResponse, error) {
-	path := fmt.Sprintf("store/shipping-options/%v", cartId)
+	path := fmt.Sprintf("/store/shipping-options/%v", cartId)
 
 	resp, err := request.
 		NewRequest().
