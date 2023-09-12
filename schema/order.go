@@ -11,7 +11,7 @@ type Order struct {
 	Status               string     `json:"status,omitempty"`
 	FulfillmentStatus    string     `json:"fulfillment_status,omitempty"`
 	PaymentStatus        string     `json:"payment_status,omitempty"`
-	DisplayId            string     `json:"display_id,omitempty"`
+	DisplayId            int        `json:"display_id,omitempty"`
 	CartId               string     `json:"cart_id,omitempty"`
 	Cart                 any        `json:"cart,omitempty"`
 	Customer             any        `json:"customer,omitempty"`
