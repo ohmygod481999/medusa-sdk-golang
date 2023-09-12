@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"reflect"
 
 	medusa "github.com/ohmygod481999/medusa-sdk-golang"
 	"github.com/ohmygod481999/medusa-sdk-golang/request"
@@ -143,10 +142,10 @@ func (u *UpdateCart) Update(cartId string, config *medusa.Config) (*UpdateCartRe
 	if u.SalesChannelId != "" {
 		reqData["sales_channel_id"] = u.SalesChannelId
 	}
-	if !reflect.DeepEqual(u.BillingAddress, make(map[string]interface{})) {
+	if u.BillingAddress != nil {
 		reqData["billing_address"] = u.BillingAddress
 	}
-	if !reflect.DeepEqual(u.ShippingAddress, make(map[string]interface{})) {
+	if u.ShippingAddress != nil {
 		reqData["shipping_address"] = u.ShippingAddress
 	}
 	if u.CustomerId != "" {
