@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"reflect"
 
 	medusa "github.com/ohmygod481999/medusa-sdk-golang"
 	"github.com/ohmygod481999/medusa-sdk-golang/request"
@@ -124,7 +125,40 @@ func (u *UpdateCart) SetContext(context map[string]any) *UpdateCart {
 // Updates a Cart.
 func (u *UpdateCart) Update(cartId string, config *medusa.Config) (*UpdateCartResponse, error) {
 	path := fmt.Sprintf("/store/carts/%v", cartId)
-	resp, err := request.NewRequest().SetMethod(http.MethodPost).SetPath(path).SetData(u).Send(config)
+
+	reqData := make(map[string]interface{})
+
+	if u.Email != "" {
+		reqData["email"] = u.Email
+	}
+	if u.RegionId != "" {
+		reqData["region_id"] = u.Email
+	}
+	if u.RegionId != "" {
+		reqData["region_id"] = u.RegionId
+	}
+	if u.CountryCode != "" {
+		reqData["country_code"] = u.CountryCode
+	}
+	if u.SalesChannelId != "" {
+		reqData["sales_channel_id"] = u.SalesChannelId
+	}
+	if !reflect.DeepEqual(u.BillingAddress, make(map[string]interface{})) {
+		reqData["billing_address"] = u.BillingAddress
+	}
+	if !reflect.DeepEqual(u.ShippingAddress, make(map[string]interface{})) {
+		reqData["shipping_address"] = u.ShippingAddress
+	}
+	if u.CustomerId != "" {
+		reqData["customer_id"] = u.CustomerId
+	}
+	if u.GiftCards != nil {
+		reqData["gift_cards"] = u.GiftCards
+	}
+	if u.Discounts != nil {
+		reqData["discounts"] = u.Discounts
+	}
+	resp, err := request.NewRequest().SetMethod(http.MethodPost).SetPath(path).SetData(reqData).Send(config)
 	if err != nil {
 		return nil, err
 	}
