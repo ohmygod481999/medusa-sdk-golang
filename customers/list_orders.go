@@ -195,6 +195,7 @@ func (l *ListOrderQuery) List(config *medusa.Config) (*ListOrderResponse, error)
 	}
 
 	parseStr := qs.Encode()
+	fmt.Println("[medusa-sdk-golang DEBUG] list order query", parseStr)
 
 	path = fmt.Sprintf("%v?%v", path, parseStr)
 	resp, err := request.
