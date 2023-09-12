@@ -58,7 +58,7 @@ type UpdateCart struct {
 	GiftCards []*GiftCard `json:"gift_cards"`
 
 	// An array of Discount codes to add to the Cart.
-	Discounts []*Discount `json:"discounts,omitempty"`
+	Discounts []*Discount `json:"discounts"`
 
 	// The ID of the Customer to associate the Cart with.
 	CustomerId string `json:"customer_id,omitempty"`
