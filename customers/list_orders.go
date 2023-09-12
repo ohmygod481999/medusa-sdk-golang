@@ -116,7 +116,7 @@ func (l *ListOrderQuery) SetOffset(offset int) *ListOrderQuery {
 }
 
 func (l *ListOrderQuery) SetLimit(limit int) *ListOrderQuery {
-	l.Offset = limit
+	l.Limit = limit
 	return l
 }
 
