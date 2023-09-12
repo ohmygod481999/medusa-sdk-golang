@@ -55,10 +55,10 @@ type UpdateCart struct {
 	ShippingAddress any `json:"shipping_address,omitempty"`
 
 	// An array of Gift Card codes to add to the Cart.
-	GiftCards []*GiftCard `json:"gift_cards"`
+	GiftCards []*GiftCard `json:"gift_cards,omitempty"`
 
 	// An array of Discount codes to add to the Cart.
-	Discounts []*Discount `json:"discounts"`
+	Discounts []*Discount `json:"discounts,omitempty"`
 
 	// The ID of the Customer to associate the Cart with.
 	CustomerId string `json:"customer_id,omitempty"`
